@@ -26,7 +26,7 @@ function generatePreference(hyperjs: HyperJS, platform: string): HyperJS {
   return hyperjs;
 }
 
-import * as hyperjs from '../hyperjs_preferences/.hyper.js';
+import * as hyperjs from './.hyper.js';
 
 // Bash on Windows
 writeHyperJS('windows.js', generatePreference(hyperjs, 'windows'));
