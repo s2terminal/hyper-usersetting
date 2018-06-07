@@ -9,7 +9,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 14,
+    fontSize: 16,
 
     // font family with optional fallbacks
     fontFamily: "Myrica M,Ricty Diminished Discord,ＭＳ ゴシック,Osaka-Mono",
@@ -87,11 +87,11 @@ module.exports = {
     MaterialTheme: {
         // Set the theme variant,
         // OPTIONS: 'Darker', 'Palenight', ''
-        theme: '',
+        theme: 'Palenight',
 
         // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
         // OPTIONS: From 0.1 to 1
-        backgroundOpacity: '0.4',
+        backgroundOpacity: '0.6',
 
         // [Optional] Set the accent color for the current active tab
         accentColor: '#64FFDA',

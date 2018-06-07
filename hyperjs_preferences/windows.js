@@ -1,7 +1,7 @@
 module.exports = {
   "config": {
     "updateChannel": "stable",
-    "fontSize": 14,
+    "fontSize": 16,
     "fontFamily": "Myrica M,Ricty Diminished Discord,ＭＳ ゴシック,Osaka-Mono",
     "fontWeight": "normal",
     "fontWeightBold": "bold",
@@ -37,8 +37,8 @@ module.exports = {
       "lightWhite": "#FFFFFF"
     },
     "MaterialTheme": {
-      "theme": "",
-      "backgroundOpacity": "0.4",
+      "theme": "Palenight",
+      "backgroundOpacity": "0.6",
       "accentColor": "#64FFDA",
       "vibrancy": ""
     },

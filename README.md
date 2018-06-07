@@ -11,6 +11,12 @@ PS > rm "C:\Users\$(Get-Content env:username)\.hyper.js"
 PS > cmd /c mklink "C:\Users\$(Get-Content env:username)\.hyper.js" "$(pwd)\hyperjs_preferences\windows.js"
 ```
 
+### Mac
+```
+$ rm "$HOME/.hyper.js"
+$ ln -s "$(pwd)/hyperjs_preferences/other.js" "$HOME/.hyper.js"
+```
+
 ## developing
 build
 ```
