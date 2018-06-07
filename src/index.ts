@@ -10,7 +10,7 @@ interface HyperJS {
 
 function writeHyperJS(name: string, data: HyperJS) {
   const filepath = path.join(process.cwd(), 'hyperjs_preferences', name);
-  fs.writeFile(filepath, `module.export = ${JSON.stringify(data,null,2)};`, function (err) {
+  fs.writeFile(filepath, `module.exports = ${JSON.stringify(data,null,2)};`, function (err) {
     if (err) {
       throw err;
     }

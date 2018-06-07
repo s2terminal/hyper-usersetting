@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
   "config": {
     "updateChannel": "stable",
     "fontSize": 14,
