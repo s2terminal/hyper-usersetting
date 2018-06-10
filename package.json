@@ -2,11 +2,14 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
+    "tslint": "tslint -c tslint.json src/index.ts",
+    "tslint-fix": "tslint -c tslint.json src/index.ts --fix",
     "generate": "node dist/bundle.js"
   },
   "devDependencies": {
     "@types/node": "^10.3.1",
     "ts-loader": "^4.3.1",
+    "tslint": "^5.10.0",
     "typescript": "^2.9.1",
     "webpack": "^4.11.1",
     "webpack-cli": "^3.0.3"
