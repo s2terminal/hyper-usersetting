@@ -1,24 +1,24 @@
-const path = require("path");
-const fs = require("fs");
+import * as fs from "fs";
+import * as path from "path";
 const PreferencesDirectory = "hyperjs_preferences";
 enum Platforms {
   Windows = "windows.js",
   Mac = "other.js"
 }
 
-interface HyperJS {
+interface IHyperJS {
   // TODO
   config: {
     shell: string;
   };
 }
 
-function writeHyperJS(name: string, data: HyperJS) {
+function writeHyperJS(name: string, data: IHyperJS) {
   const filepath = path.join(process.cwd(), PreferencesDirectory, name);
   fs.writeFile(
     filepath,
     `module.exports = ${JSON.stringify(data, null, 2)};`,
-    function(err) {
+    err => {
       if (err) {
         throw err;
       }
@@ -26,13 +26,13 @@ function writeHyperJS(name: string, data: HyperJS) {
   );
 }
 
-function generatePreference(hyperjs: HyperJS, platform: Platforms): HyperJS {
-  if (platform == Platforms.Windows) {
-    hyperjs.config.shell = "C:\\Windows\\System32\\bash.exe";
+function generatePreference(hyper: IHyperJS, platform: Platforms): IHyperJS {
+  if (platform === Platforms.Windows) {
+    hyper.config.shell = "C:\\Windows\\System32\\bash.exe";
   } else {
-    hyperjs.config.shell = "";
+    hyper.config.shell = "";
   }
-  return hyperjs;
+  return hyper;
 }
 
 import * as hyperjs from "./.hyper.js";
