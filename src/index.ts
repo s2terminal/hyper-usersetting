@@ -3,7 +3,7 @@ const fs = require("fs");
 const PreferencesDirectory = "hyperjs_preferences";
 enum Platforms {
   Windows = "windows.js",
-  Mac = "other.js",
+  Mac = "other.js"
 }
 
 interface HyperJS {
@@ -15,11 +15,15 @@ interface HyperJS {
 
 function writeHyperJS(name: string, data: HyperJS) {
   const filepath = path.join(process.cwd(), PreferencesDirectory, name);
-  fs.writeFile(filepath, `module.exports = ${JSON.stringify(data, null, 2)};`, function(err) {
-    if (err) {
-      throw err;
+  fs.writeFile(
+    filepath,
+    `module.exports = ${JSON.stringify(data, null, 2)};`,
+    function(err) {
+      if (err) {
+        throw err;
+      }
     }
-  });
+  );
 }
 
 function generatePreference(hyperjs: HyperJS, platform: Platforms): HyperJS {
