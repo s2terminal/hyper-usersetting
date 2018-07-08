@@ -13,7 +13,7 @@ module.exports = {
     "backgroundColor": "#000",
     "selectionColor": "rgba(248,28,229,0.3)",
     "borderColor": "#333",
-    "css": "",
+    "css": ".hyper_main{ background:url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right; background-color:rgb(100,103,134);}",
     "termCSS": "",
     "showHamburgerMenu": "",
     "showWindowControls": "",
