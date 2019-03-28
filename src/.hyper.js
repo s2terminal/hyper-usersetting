@@ -140,6 +140,10 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+    opacity: {
+      focus: 0.9,
+      blur: 0.5
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -149,6 +153,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
+    "hyper-opacity"
   ],
 
   // in development, you can create a directory under

@@ -49,9 +49,15 @@ module.exports = {
     "env": {},
     "bell": "SOUND",
     "copyOnSelect": false,
-    "defaultSSHApp": true
+    "defaultSSHApp": true,
+    "opacity": {
+      "focus": 0.9,
+      "blur": 0.5
+    }
   },
-  "plugins": [],
+  "plugins": [
+    "hyper-opacity"
+  ],
   "localPlugins": [],
   "keymaps": {}
 };
