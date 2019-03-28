@@ -46,8 +46,12 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: '.hyper_main{background:url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right; background-color:rgb(100,103,134);}',
-
+    css: `
+      .hyper_main{
+        background:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right;
+        background-color:#646786;
+      }
+    `,
     // custom CSS to embed in the terminal window
     termCSS: '',
 

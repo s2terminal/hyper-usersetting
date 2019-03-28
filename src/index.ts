@@ -34,41 +34,17 @@ function generatePreference(hyperjs: HyperJS, platform: Platforms): HyperJS {
 import * as hyperjs from './.hyper.js';
 
 
-// refs. https://github.com/klauscfhq/hyper-pokemon/blob/master/index.js
 const color = require('color');
-let [primary, secondary, tertiary, unibody] = ['#eade8c', '#8abfcf', '#d6d7d9', '#53586c'];
-const background    = true ? unibody : primary;
-const selection     = color(primary).alpha(0.3).string();
-const transparent   = color(secondary).alpha(0).string();
-const header        = color(background).isDark()  ? '#FAFAFA' : '#010101';
-const activeTab     = color(secondary).isDark()   ? '#FAFAFA' : '#383A42';
-const tab           = color(activeTab).darken(0.1);
+const decretum = {
+  background: '#646786',
+  foreground: '#8abfcf'
+};
 
 const syntax = {
-  backgroundColor: transparent,
-  borderColor: background,
-  cursorColor: secondary,
-  foregroundColor: secondary,
-  selectionColor: selection,
-  colors: {
-    black: tertiary,
-    red: secondary,
-    green: tertiary,
-    yellow: secondary,
-    blue: secondary,
-    magenta: secondary,
-    cyan: secondary,
-    white: secondary,
-    lightBlack: tertiary,
-    lightRed: secondary,
-    lightGreen: secondary,
-    lightYellow: secondary,
-    lightBlue: secondary,
-    lightMagenta: secondary,
-    lightCyan: secondary,
-    lightWhite: secondary
-  }
+  backgroundColor: color(decretum.foreground).alpha(0).string(),
+  borderColor: decretum.background,
 };
+
 const hjs = Object.assign(hyperjs, {"config": Object.assign(hyperjs.config, syntax)});
 
 // Bash on Windows
