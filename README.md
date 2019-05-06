@@ -7,8 +7,8 @@
 ### Windows Subsystem for Linux (WSL, Bash on Windows)
 Open PowerShell and run this.
 ```
-PS > rm "C:\Users\$(Get-Content env:username)\.hyper.js"
-PS > cmd /c mklink "C:\Users\$(Get-Content env:username)\.hyper.js" "$(pwd)\hyperjs_preferences\windows.js"
+PS > rm "C:\Users\$(Get-Content env:username)\AppData\Roaming\Hyper\.hyper.js"
+PS > cmd /c mklink "C:\Users\$(Get-Content env:username)\AppData\Roaming\Hyper\.hyper.js" "$(pwd)\hyperjs_preferences\windows.js"
 ```
 
 ### Mac
