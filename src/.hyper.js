@@ -48,7 +48,7 @@ module.exports = {
     // custom CSS to embed in the main window
     css: `
       .hyper_main{
-        background:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right;
+        background:linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right;
         background-color:#646786;
       }
     `,

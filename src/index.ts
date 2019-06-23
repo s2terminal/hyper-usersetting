@@ -35,33 +35,41 @@ import * as hyperjs from './.hyper.js';
 
 
 const color = require('color');
-const decretum = {
-  background: '#646786',
-  foreground: '#8abfcf'
-};
+const foregroundColor = "#f3f4ef";
+const backgroundColor = "#22242d";
+const red = "#ff1654";
+const green = "#06d6a0";
+const yellow = "#ffe66d";
+const blue = "#00abe7";
+const magenta = "#ff60b5";
+const cyan = "#7bdff2";
+const white = "#f9f9f9";
 
 const syntax = {
-  backgroundColor: color(decretum.foreground).alpha(0).string(),
-  borderColor: decretum.background,
-  foregroundColor: "#eee",
-  // https://github.com/equinusocio/hyper-material-theme/blob/master/index.js#L38
+  // https://github.com/yxuko/hyper-altair/blob/master/index.js
+  backgroundColor: color(backgroundColor).alpha(0).string(),
+  foregroundColor,
+  borderColor: "#211f30",
+  cursorColor: "#b4b4ba",
+  cursorAccentColor: backgroundColor,
+  selectionColor: "rgba(78, 205, 196, 0.4)",
   colors: {
-    black: '#000000',
-    red: '#E54B4B',
-    green: '#9ECE58',
-    yellow: '#FAED70',
-    blue: '#396FE2',
-    magenta: '#BB80B3',
-    cyan: '#2DDAFD',
-    white: '#d0d0d0',
-    lightBlack: 'rgba(255, 255, 255, 0.2)',
-    lightRed: '#FF5370',
-    lightGreen: '#C3E88D',
-    lightYellow: '#FFCB6B',
-    lightBlue: '#82AAFF',
-    lightMagenta: '#C792EA',
-    lightCyan: '#89DDFF',
-    lightWhite: '#ffffff'
+    black: backgroundColor,
+    red,
+    green,
+    yellow,
+    blue,
+    magenta,
+    cyan,
+    white,
+    lightBlack: "#7a7a7a",
+    lightRed: red,
+    lightGreen: green,
+    lightYellow: yellow,
+    lightBlue: blue,
+    lightMagenta: magenta,
+    lightCyan: cyan,
+    lightWhite: foregroundColor
   }
 };
 
