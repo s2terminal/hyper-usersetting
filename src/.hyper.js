@@ -9,16 +9,22 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 16,
+    fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: "Myrica M,Ricty Diminished Discord,ＭＳ ゴシック,Osaka-Mono",
+    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
 
     // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: 'bold',
+
+    // line height as a relative unit
+    lineHeight: 1,
+
+    // letter spacing as a relative unit
+    letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -30,7 +36,7 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: true,
+    cursorBlink: false,
 
     // color of the text
     foregroundColor: '#fff',
@@ -46,12 +52,8 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: `
-      .hyper_main{
-        background:linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right;
-        background-color:#646786;
-      }
-    `,
+    css: '',
+
     // custom CSS to embed in the terminal window
     termCSS: '',
 
@@ -101,7 +103,7 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: 'C:\\Windows\\System32\\bash.exe',
+    shell: '',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
@@ -121,16 +123,21 @@ module.exports = {
 
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
     // selection is present (`true` by default on Windows and disables the context menu feature)
-    // quickEdit: true,
+    quickEdit: false,
+
+    // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
+    // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
+    // (inside tmux or vim with mouse mode enabled for example).
+    macOptionSelectionMode: 'vertical',
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
 
+    // Whether to use the WebGL renderer. Set it to false to use canvas-based
+    // rendering (slower, but supports transparent backgrounds)
+    webGLRenderer: true,
+
     // for advanced config flags please refer to https://hyper.is/#cfg
-    opacity: {
-      focus: 0.9,
-      blur: 0.5
-    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -139,9 +146,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [
-    "hyper-opacity"
-  ],
+  plugins: [],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

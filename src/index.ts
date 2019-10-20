@@ -3,6 +3,7 @@ const fs = require('fs');
 const PreferencesDirectory = 'hyperjs_preferences';
 enum Platforms {
   Windows = 'windows.js',
+  Linux = 'linux.js',
   Mac = 'other.js'
 };
 
@@ -33,7 +34,27 @@ function generatePreference(hyperjs: HyperJS, platform: Platforms): HyperJS {
 
 import * as hyperjs from './.hyper.js';
 
+// Font settings
+hyperjs.config.fontFamily = "Myrica M,Ricty Diminished Discord,ＭＳ ゴシック,DejaVu Sans Mono,Noto Sans Mono,Osaka-Mono";
+hyperjs.config.fontSize = 16;
+hyperjs.config.lineHeight = 1;
+hyperjs.config.letterSpacing = 0;
+hyperjs.config.cursorBlink = true;
+hyperjs.config.css = `
+.hyper_main{
+  background:linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right;
+  background-color:#646786;
+}`;
+hyperjs.config.quickEdit = false;
+hyperjs.config.macOptionSelectionMode = 'vertical';
+hyperjs.config.webGLRenderer = true;
+hyperjs.config.opacity = {
+  focus: 0.9,
+  blur: 0.5
+};
+hyperjs.plugins.push("hyper-opacity");
 
+// Syntax Highlihgt
 const color = require('color');
 const foregroundColor = "#f3f4ef";
 const backgroundColor = "#22242d";
@@ -77,5 +98,7 @@ const hjs = Object.assign(hyperjs, {"config": Object.assign(hyperjs.config, synt
 
 // Bash on Windows
 writeHyperJS(Platforms.Windows, generatePreference(hjs, Platforms.Windows));
+// Linux
+writeHyperJS(Platforms.Linux, generatePreference(hjs, Platforms.Linux));
 // Others
 writeHyperJS(Platforms.Mac, generatePreference(hjs, Platforms.Mac));

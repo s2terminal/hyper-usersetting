@@ -2,9 +2,11 @@ module.exports = {
   "config": {
     "updateChannel": "stable",
     "fontSize": 16,
-    "fontFamily": "Myrica M,Ricty Diminished Discord,ＭＳ ゴシック,Osaka-Mono",
+    "fontFamily": "Myrica M,Ricty Diminished Discord,ＭＳ ゴシック,DejaVu Sans Mono,Noto Sans Mono,Osaka-Mono",
     "fontWeight": "normal",
     "fontWeightBold": "bold",
+    "lineHeight": 1,
+    "letterSpacing": 0,
     "cursorColor": "#b4b4ba",
     "cursorAccentColor": "#22242d",
     "cursorShape": "BLOCK",
@@ -13,7 +15,7 @@ module.exports = {
     "backgroundColor": "rgba(34, 36, 45, 0)",
     "selectionColor": "rgba(78, 205, 196, 0.4)",
     "borderColor": "#211f30",
-    "css": "\n      .hyper_main{\n        background:linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right;\n        background-color:#646786;\n      }\n    ",
+    "css": "\n.hyper_main{\n  background:linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(http://www.top4themes.com/data/out/123/6442400-sayaka-miki-wallpapers.png) no-repeat top right;\n  background-color:#646786;\n}",
     "termCSS": "",
     "showHamburgerMenu": "",
     "showWindowControls": "",
@@ -44,6 +46,9 @@ module.exports = {
     "bell": "SOUND",
     "copyOnSelect": false,
     "defaultSSHApp": true,
+    "quickEdit": false,
+    "macOptionSelectionMode": "vertical",
+    "webGLRenderer": true,
     "opacity": {
       "focus": 0.9,
       "blur": 0.5
