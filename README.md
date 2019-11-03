@@ -7,7 +7,8 @@
 ```
 $ mkdir ~/git; cd $_
 $ git clone git@github.com:s2terminal/hyper-usersetting.git
-$ rm "$HOME/.config/hyper/.hyper.js" &&  ln -s "$(pwd)/hyperjs_preferences/linux.js" "$HOME/.config/hyper/.hyper.js"
+$ cd hyper-usersetting
+$ rm "$HOME/.hyper.js"; ln -s "$(pwd)/hyperjs_preferences/linux.js" "$HOME/.hyper.js"
 ```
 
 ### Windows Subsystem for Linux (WSL, Bash on Windows)
